@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>p o e m s</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,39 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
-    </body>
+
+  <h1>Poem Project</h1>
+
+  <section id='user-auth'>
+    <form id='sign-up'>
+      <h2>Sign-up</h2>
+      <input name='credentials[email]' type='email' placeholder='Email' required>
+      <input name='credentials[password]' type='password' placeholder='Password' required>
+      <input name='credentials[password_confirmation]' type='password' placeholder='Confirm password' required>
+      <button>Sign Up</button>
+    </form>
+
+    <form id='sign-in'>
+      <h2>Sign In</h2>
+      <input name='credentials[email]' type='email' placeholder='Email' required autocomplete='email'>
+      <input name='credentials[password]' type='password' placeholder='Password' required autocomplete='current-password'>
+      <button>Sign In</button>
+    </form>
+
+    <div class='sign-out'>
+      <button>Sign Out</button>
+    </div>
+  </section>
+
+  <section id='success-messages'>
+    <div id='sign-up-message' class='sign-up-message'></div>
+    <div id='sign-out-message' class='sign-out-message'></div>
+    <div id='sign-in-message' class='sign-in-message'></div>
+  </section>
+
+  <section class='error'>
+    <div id='error-message'></div>
+  </section>
+
+</body>
 </html>
