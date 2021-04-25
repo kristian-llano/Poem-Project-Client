@@ -1,1 +1,19 @@
 @import '~bootstrap/scss/bootstrap';
+
+$error-font-color: $red;
+$success-font-color: $green;
+
+body {
+  text-align: center;
+
+  .error {
+    color: $error-font-color;
+  }
+
+  .sign-out-message,
+  .sign-in-message,
+  .sign-up-message {
+    color: $success-font-color;
+  }
+
+}

@@ -16,6 +16,7 @@
   <h1>Poem Project</h1>
 
   <section id='user-auth'>
+
     <form id='sign-up'>
       <h2>Sign-up</h2>
       <input name='credentials[email]' type='email' placeholder='Email' required>
@@ -34,12 +35,28 @@
     <div class='sign-out'>
       <button>Sign Out</button>
     </div>
+
+  </section>
+
+  <section id='poem'>
+
+    <button class='poem-button'>Create New Poem</button>
+    <button class='view-poem-button'>View Poems</button>
+    <form id='create-poem' class='create-poem'>
+      <input class='css-create-poem' name='poem[title]' type='text' placeholder='Title' required>
+      <input class='css-create-poem poem-body' name='poem[body]' type='text' placeholder='Body' required>
+    <button class='create-new-poem'>Create</button>
+    </form>
+
+
+
   </section>
 
   <section id='success-messages'>
     <div id='sign-up-message' class='sign-up-message'></div>
     <div id='sign-out-message' class='sign-out-message'></div>
     <div id='sign-in-message' class='sign-in-message'></div>
+    <div id='poem-create-message' class='poem-create-message'></div>
   </section>
 
   <section class='error'>

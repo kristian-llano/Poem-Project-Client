@@ -19,6 +19,7 @@ const onSignInSuccess = function (responseData) {
   $('#sign-in').hide()
   $('#sign-up').hide()
   $('.sign-out').show()
+  $('#poem').show()
 }
 
 const onSignOutSuccess = function (responseData) {
@@ -33,8 +34,17 @@ const onSignOutSuccess = function (responseData) {
   $('#sign-up').show()
 }
 
+const onError = function (err) {
+  console.error(err)
+  $('#error-message').text('Something went wrong, please try again.')
+  setTimeout(function () {
+    $('#error-message').fadeOut('slow')
+  }, 3000)
+}
+
 module.exports = {
   onSignInSuccess,
   onSignOutSuccess,
-  onSignUpSuccess
+  onSignUpSuccess,
+  onError
 }
