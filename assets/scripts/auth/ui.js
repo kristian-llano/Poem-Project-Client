@@ -20,6 +20,7 @@ const onSignInSuccess = function (responseData) {
   $('#sign-up').hide()
   $('.sign-out').show()
   $('#poem').show()
+  $('#change-password').show()
 }
 
 const onSignOutSuccess = function (responseData) {
@@ -32,6 +33,16 @@ const onSignOutSuccess = function (responseData) {
   $('.sign-out').hide()
   $('#sign-in').show()
   $('#sign-up').show()
+  $('#change-password').hide()
+  $('#poem').hide()
+}
+
+const onChangePasswordSuccess = function (responseData) {
+  $('#change-password-message').text('Successfully changed password!')
+  setTimeout(function () {
+    $('#change-password-message').fadeOut('slow')
+  }, 3000)
+  $('form').trigger('reset')
 }
 
 const onError = function (err) {
@@ -46,5 +57,6 @@ module.exports = {
   onSignInSuccess,
   onSignOutSuccess,
   onSignUpSuccess,
-  onError
+  onError,
+  onChangePasswordSuccess
 }

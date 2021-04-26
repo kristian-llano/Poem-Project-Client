@@ -27,10 +27,11 @@ const signOut = function () {
   })
 }
 
-const changePassword = function () {
+const changePassword = function (formData) {
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/change-password',
+    data: formData,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
