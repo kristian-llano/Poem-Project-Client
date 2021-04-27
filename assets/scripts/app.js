@@ -1,16 +1,26 @@
 'use strict'
 
+const poemEvents = require('./poems/events')
+console.log('poemEvents', poemEvents)
 const authEvents = require('./auth/events')
 console.log('authEvents', authEvents)
 
 $(() => {
-  $('#change-password').hide()
+  // POEMS
   $('#poem').hide()
   $('.create-poem').hide()
   $('.poem-button').on('click', function () {
     $('.create-poem').toggle()
   })
+  $('.create-new-poem').on('submit', poemEvents.onCreatePoem)
+
+  // USER poem
+  $('.change-password-toggle').hide()
+  $('#change-password').hide()
   $('.sign-out').hide()
+  $('.change-password-toggle').on('click', function () {
+    $('#change-password').toggle()
+  })
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)

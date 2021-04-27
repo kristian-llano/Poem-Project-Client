@@ -10,9 +10,15 @@ body {
     color: $error-font-color;
   }
 
+  .change-password-toggle {
+    position: absolute;
+    right: 145px;
+    top: 35px;
+  }
+
   .sign-out {
     position: absolute;
-    right: 50px;
+    right: 60px;
     top: 35px;
   }
 

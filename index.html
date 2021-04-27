@@ -15,6 +15,18 @@
 
   <h1>Poem Project</h1>
 
+  <section id='poem'>
+
+    <button class='poem-button'>Create New Poem</button>
+    <button class='view-poem-button'>View Poems</button>
+    <form id='create-poem' class='create-poem'>
+      <input class='poem-title' name='poem[title]' type='text' placeholder='Title' required>
+      <input class='poem-body' name='poem[body]' type='text' placeholder='Body' required>
+      <button class='create-new-poem'>Create</button>
+    </form>
+
+  </section>
+
   <section id='user-auth'>
 
     <form id='sign-up'>
@@ -32,11 +44,11 @@
       <button>Sign In</button>
     </form>
 
+    <button class='change-password-toggle'>Change Password</button>
     <form id='change-password'>
-      <h2>Change Password</h2>
       <input name='passwords[old]' type='password' placeholder='Old Password' required autocomplete='old-password'>
       <input name='passwords[new]' type='password' placeholder='New Password' required autocomplete='new-password'>
-      <button>Change Password</button>
+      <button>Update</button>
     </form>
 
     <div class='sign-out'>
@@ -45,19 +57,6 @@
 
   </section>
 
-  <section id='poem'>
-
-    <button class='poem-button'>Create New Poem</button>
-    <button class='view-poem-button'>View Poems</button>
-    <form id='create-poem' class='create-poem'>
-      <input class='css-create-poem' name='poem[title]' type='text' placeholder='Title' required>
-      <input class='css-create-poem poem-body' name='poem[body]' type='text' placeholder='Body' required>
-    <button class='create-new-poem'>Create</button>
-    </form>
-
-
-
-  </section>
 
   <section id='success-messages'>
     <div id='sign-up-message' class='sign-up-message'></div>
@@ -65,6 +64,10 @@
     <div id='sign-in-message' class='sign-in-message'></div>
     <div id='change-password-message' class='change-password-message'></div>
     <div id='poem-create-message' class='poem-create-message'></div>
+    <div id='poem-view-message' class='poem-create-message'></div>
+    <div id='poem-delete-message' class='poem-create-message'></div>
+    <div id='poem-update-message' class='poem-create-message'></div>
+    <div id='poem-display'></div>
   </section>
 
   <section class='error'>
