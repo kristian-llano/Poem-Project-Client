@@ -22,10 +22,7 @@ body {
     top: 35px;
   }
 
-  .sign-out-message,
-  .sign-in-message,
-  .sign-up-message,
-  .change-password-message {
+  .success-messages {
     color: $success-font-color;
   }
 

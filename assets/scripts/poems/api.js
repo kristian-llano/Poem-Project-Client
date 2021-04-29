@@ -12,6 +12,17 @@ const createPoem = function (formData) {
   })
 }
 
+const updatePoem = function (id, formData) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/poems/' + id,
+    data: formData,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 const viewPoem = function () {
   return $.ajax({
     method: 'GET',
@@ -26,17 +37,6 @@ const destroyPoem = function (id) {
   return $.ajax({
     method: 'DELETE',
     url: config.apiUrl + '/poems/' + id,
-    headers: {
-      Authorization: 'Bearer ' + store.user.token
-    }
-  })
-}
-
-const updatePoem = function (id, formData) {
-  return $.ajax({
-    method: 'PATCH',
-    url: config.apiUrl + '/poems/' + id,
-    data: formData,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }

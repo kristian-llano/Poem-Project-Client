@@ -19,10 +19,18 @@
 
     <button class='poem-button'>Create New Poem</button>
     <button class='view-poem-button'>View Poems</button>
+    <button class='update-poem-button'>Update Poem</button>
+
     <form id='create-poem' class='create-poem'>
-      <input class='poem-title' name='poem[title]' type='text' placeholder='Title' required>
-      <input class='poem-body' name='poem[body]' type='text' placeholder='Body' required>
-      <button class='create-new-poem'>Create</button>
+      <input name='poem[title]' type='text' placeholder='Title' required>
+      <input name='poem[body]' type='text' placeholder='Body' required>
+      <button>Create</button>
+    </form>
+
+    <form id='update-poem' class='update-poem'>
+      <input name='poem[title]' type='text' placeholder='Title' required>
+      <input name='poem[body]' type='text' placeholder='Body' required>
+      <button>Update</button>
     </form>
 
   </section>
@@ -58,15 +66,15 @@
   </section>
 
 
-  <section id='success-messages'>
+  <section class='success-messages'>
     <div id='sign-up-message' class='sign-up-message'></div>
     <div id='sign-out-message' class='sign-out-message'></div>
     <div id='sign-in-message' class='sign-in-message'></div>
     <div id='change-password-message' class='change-password-message'></div>
     <div id='poem-create-message' class='poem-create-message'></div>
-    <div id='poem-view-message' class='poem-create-message'></div>
-    <div id='poem-delete-message' class='poem-create-message'></div>
-    <div id='poem-update-message' class='poem-create-message'></div>
+    <div id='poem-view-message' class='poem-view-message'></div>
+    <div id='poem-delete-message' class='poem-delete-message'></div>
+    <div id='poem-update-message' class='poem-update-message'></div>
     <div id='poem-display'></div>
   </section>
 

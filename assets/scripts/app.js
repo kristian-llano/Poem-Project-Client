@@ -12,7 +12,9 @@ $(() => {
   $('.poem-button').on('click', function () {
     $('.create-poem').toggle()
   })
-  $('.create-new-poem').on('submit', poemEvents.onCreatePoem)
+  $('#create-poem').on('submit', poemEvents.onCreatePoem)
+  $('#update-poem').on('submit', poemEvents.onDynamicUpdatePoem)
+  $('.view-poem-button').on('click', poemEvents.onViewpoem)
 
   // USER poem
   $('.change-password-toggle').hide()
