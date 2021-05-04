@@ -12,9 +12,15 @@ $(() => {
   $('.poem-button').on('click', function () {
     $('.create-poem').toggle()
   })
+  $('#poem-display').on('click', '.poem-edit', function () {
+    $('.poems-update-dynamic').toggle()
+  })
   $('#create-poem').on('submit', poemEvents.onCreatePoem)
-  $('#update-poem').on('submit', poemEvents.onDynamicUpdatePoem)
-  $('.view-poem-button').on('click', poemEvents.onViewpoem)
+  $('.view-poem-button').on('click', poemEvents.onViewPoem)
+  $('#poem-display').on('click', '.poems-destroy-dynamic', poemEvents.onDynamicDestroyPoem)
+  // $('#poem-display').on('click', '.poem-edit', poemEvents.onPoemEdit)
+  // $('#poem-display').on('click', '.poem-edit-return', poemEvents.onPoemEditReturn)
+  $('#poem-display').on('submit', '.poems-update-dynamic', poemEvents.onDynamicUpdatePoem)
 
   // USER poem
   $('.change-password-toggle').hide()
