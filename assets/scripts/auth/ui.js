@@ -36,8 +36,11 @@ const onSignOutSuccess = function (responseData) {
   $('.sign-out').hide()
   $('#sign-in').show()
   $('#sign-up').show()
+  $('.change-password-toggle').hide()
   $('#change-password').hide()
   $('#poem').hide()
+  $('#poem-display').hide()
+  $('#poem-view-message').hide()
 }
 
 const onChangePasswordSuccess = function (responseData) {

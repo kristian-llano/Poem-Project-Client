@@ -2,7 +2,7 @@ const store = require('../store')
 
 const onCreatePoemSuccess = function (response) {
   store.user.poem = response.poem
-  $('.poem-create-message').fadeIn('fast')
+  $('.poem-create-message').show()
   $('.poem-create-message').text('Poem created successfully')
   setTimeout(function () {
     $('.poem-create-message').fadeOut('slow')
@@ -11,6 +11,7 @@ const onCreatePoemSuccess = function (response) {
 }
 
 const onViewPoemSuccess = function (response) {
+  $('#poem-view-message').show()
   $('#poem-view-message').text('Here are your created poems:')
   const poems = response.poems
   let poemsHtml = ''
@@ -38,15 +39,15 @@ const onViewPoemSuccess = function (response) {
 
 const onDestroyPoemSuccess = function () {
   $('#poem-delete-message').text('Poem deleted successfully')
-  $('#poem-delete-message').fadeIn('fast')
+  $('#poem-delete-message').show()
   setTimeout(() => {
     $('#poem-delete-message').fadeOut('slow')
   }, 3000)
 }
 
 const onUpdatePoemSuccess = function () {
-  $('#poem-update-message').text('poem updated successfully')
-  $('#poem-update-message').fadeIn('fast')
+  $('#poem-update-message').text('Poem updated successfully')
+  $('#poem-update-message').show()
   setTimeout(() => {
     $('#poem-update-message').fadeOut('slow')
   }, 3000)
@@ -55,7 +56,7 @@ const onUpdatePoemSuccess = function () {
 const onError = function (err) {
   console.error(err)
   $('#error-message').text('Something went wrong, please try again.')
-  $('#error-message').fadeIn('fast')
+  $('#error-message').show()
   setTimeout(function () {
     $('#error-message').fadeOut('slow')
   }, 3000)
